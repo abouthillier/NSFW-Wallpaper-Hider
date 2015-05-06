@@ -2,6 +2,10 @@
 
 ### What is this repository for? ###
 
+Update:
+
+You'll notice the .app folder in the repo, I'm working on getting the icon to switch upon execution. Feel free to use the script below, but if you have an idea for the icon problem, let me know!
+
 NSFW Wallpaper Hider is a simple bash script that allows
 the user to hide or include NSFW-labelled images in a
 rotating wallpaper cycle.
