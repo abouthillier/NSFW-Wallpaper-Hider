@@ -25,10 +25,10 @@ app_dir=~/Documents/Development/Bash/NSFW\ Wallpaper\ Hider/NSFW\ Wallpaper\ Hid
 cd ~/Downloads/Wallpapers
 
 # Count how many hidden files there are
-lines=`ls -a | grep -s .* | wc -l`
+lines=$(ls -a | grep -s .* | wc -l)
 
 # Count how many NSFW images there are
-files=`ls -a | grep nsfw | wc -l`
+files=$(ls -a | grep nsfw | wc -l)
 
 # If there are more hidden files than just the
 #  default .DS_store file
@@ -41,7 +41,7 @@ if [ "$lines" -gt "1" ]; then
         mv -n "$f" "${f#.}"
     done
 
-    `cp "$app_dir"/Off.icns "$app_dir"/icon.icns`
+    $(cp "$app_dir"/Off.icns "$app_dir"/icon.icns)
 
     echo "$files" NSFW files now visible
 
@@ -55,7 +55,7 @@ else
         mv "$file" ".$file"
     done
 
-    `cp "$app_dir"/On.icns "$app_dir"/icon.icns`
+    $(cp "$app_dir"/On.icns "$app_dir"/icon.icns)
 
     echo "$files" NSFW files now hidden
 fi
